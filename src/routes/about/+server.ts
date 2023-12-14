@@ -1,6 +1,6 @@
-import {z} from "https://deno.land/x/zod@v3.22.4/mods.ts"
+import { z } from "../../../deps.ts"
 
 export const GET = () => {
-
-    return new Response("Hello world")
+    const message = z.string().parse("Hello world");
+    return new Response(message)
 }
